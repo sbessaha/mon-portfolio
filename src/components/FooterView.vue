@@ -9,13 +9,13 @@
       <v-card-text>
         <v-btn
           class="mx-4"
-          href="https://x.com/Sajisse"
+          href="https://www.linkedin.com/in/sofiane-bessaha-415127271/"
           target="_blank"
           variant="plain"
           color="white"
         >
           <v-img
-            src="X.png"
+            src="linkedin.png"
             alt="Twitter"
             height="32"
             width="32"

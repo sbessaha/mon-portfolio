@@ -46,14 +46,7 @@
               </div>
             </v-col>
             <v-col cols="12" sm="6">
-              <h5 class="mt-16">A propos de moi</h5>
-              <div style="width: 120px">
-                <v-slider
-                  v-model="slider2"
-                  color="yellow"
-                  label="track-color"
-                ></v-slider>
-              </div>
+              <h5 class="mt-16 mb-6">À propos de moi</h5>
               <h4 class="mt-n4">Je suis un développeur web fullstack</h4>
               <p class="text-grey">
                 Fort de mon apprentissage a l'école Epitech, je suis capable de
@@ -71,14 +64,7 @@
       </v-col>
 
       <div class="text-center mt-4">
-        <h2>Ou j'en suis ?</h2>
-        <div style="width: 120px; margin: 0 auto">
-          <v-slider
-            v-model="slider2"
-            color="yellow"
-            label="track-color"
-          ></v-slider>
-        </div>
+        <h2>Où j'en suis ?</h2>
       </div>
       <v-col cols="12" class="padd" id="portfolio">
         <div class="first" id="project">
