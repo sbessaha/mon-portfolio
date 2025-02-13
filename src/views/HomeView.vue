@@ -115,10 +115,10 @@
 
       <v-col cols="12" sm="12" id="services">
         <div class="d-flex justify-center mb-6">
-          <v-btn @click="filterCategory = 'all'" color="#FBDF7E" class="mr-2">Tout afficher</v-btn>
-          <v-btn @click="filterCategory = 'frontend'" class="mr-2" variant="tonal">Front-end</v-btn>
-          <v-btn @click="filterCategory = 'backend'" class="mr-2" variant="tonal">Back-end</v-btn>
-          <v-btn @click="filterCategory = 'fullstack'" class="mr-2" variant="tonal">Full stack</v-btn>
+          <v-btn @click="setFilterCategory('all')" color="#FBDF7E" class="mr-2">Tout afficher</v-btn>
+          <v-btn @click="setFilterCategory('frontend')" class="mr-2" variant="tonal">Front-end</v-btn>
+          <v-btn @click="setFilterCategory('backend')" class="mr-2" variant="tonal">Back-end</v-btn>
+          <v-btn @click="setFilterCategory('fullstack')" class="mr-2" variant="tonal">Full stack</v-btn>
         </div>
       </v-col>
 
@@ -237,7 +237,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref, computed, watch } from "vue";
 import NavBar from "../components/NavBar.vue";
 import FooterView from "../components/FooterView.vue";
 
@@ -246,6 +246,12 @@ export default defineComponent({
   setup() {
     const slider2 = ref(50);
     const filterCategory = ref("all");
+    const setFilterCategory = (category) => {
+      console.log("test", category);
+      if (category) {
+        filterCategory.value = category;
+      }
+    }
     const items = [
       {
         img: "Twitter_1.png",
@@ -285,11 +291,17 @@ export default defineComponent({
     ];
 
     const filteredItems = computed(() => {
+      if (!items) return [];
       if (filterCategory.value === "all") {
         return items;
       }
       return items.filter(item => item.category === filterCategory.value);
     });
+
+    watch(filterCategory, (newVal) => {
+      console.log("Nouvelle catégorie sélectionnée :", newVal);
+    });
+
 
     const skills = [
       {
@@ -348,6 +360,7 @@ export default defineComponent({
       filteredItems,
       items,
       skills,
+      setFilterCategory,
     };
   },
   components: {
