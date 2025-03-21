@@ -35,7 +35,7 @@
                 un projet concret et utile.
               </p>
               <br />
-              <v-btn tile dark color="yellow" class="mt-4" href="/CV.pdf" download>
+              <v-btn tile dark color="yellow" class="mt-4" href="CV.jpeg" download>
                 Télécharger mon CV
               </v-btn>
             </v-col>
