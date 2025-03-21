@@ -5,39 +5,16 @@
       <div class="head">
         <v-row>
           <v-col cols="5">
-            <div style="position: relative" class="mt-16">
+            <div style="position: relative" class="mt-10">
               <h1 class="text-grey">Bienvenue !</h1>
               <h1 class="text-white">Je suis Sofiane Bessaha</h1>
               <span class="text-grey">Developpeur fullstack et intégrateur web</span><br />
             </div>
           </v-col>
-
-          <v-col cols="2">
-            <div
-              style="
-                position: absolute;
-                z-index: 9999;
-                bottom: 0;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                text-align: center;
-              "
-              class="mt-16"
-            >
-            </div>
-          </v-col>
-
-          <v-col cols="5">
-            <div style="position: relative; z-index: 9999" class="mt-16">
-              <v-img src="" contain max-height="300"></v-img>
-            </div>
-          </v-col>
         </v-row>
       </div>
 
-      <v-col cols="12" class="mt-16" id="about">
+      <v-col cols="12" class="" id="about">
         <div>
           <v-row>
             <v-col cols="12" sm="6">
@@ -47,37 +24,36 @@
             </v-col>
             <v-col cols="12" sm="6">
               <h5 class="mt-16 mb-6">À propos de moi</h5>
-              <h4 class="mt-n4">Je suis un développeur web fullstack</h4>
-              <p class="text-grey">
+              <h4 class="mt-n2">Je suis un développeur web fullstack</h4>
+              <p class="text-grey-darken-2 mt-2">
                 Fort de mon apprentissage a l'école Epitech, je suis capable de
                 créer des applications web simple ou complexe. Je suis
                 également capable de créer des applications mobiles et de
-                m'occuper de projet back-end.
+                m'occuper de projet back-end.<br>
+                Grâce à mon alternance de 14mois au sein de Adeo Service en tant que Developpeur fullstack,
+                j'ai acquis une certaine expérience pour travailler au sein d'une entreprise et avec un groupe sur
+                un projet concret et utile.
               </p>
               <br />
-              <v-btn tile dark color="yellow" class="mt-4" href="CV.pdf" download>
+              <v-btn tile dark color="yellow" class="mt-4" href="/CV.pdf" download>
                 Télécharger mon CV
               </v-btn>
             </v-col>
           </v-row>
         </div>
       </v-col>
-
-      <div class="text-center mt-4">
-        <h2>Où j'en suis ?</h2>
-      </div>
-      <v-col cols="12" class="padd" id="portfolio">
+      <v-col cols="12" class="padd">
         <div class="first" id="project">
           <v-row>
             <v-col cols="12">
-              <div class="child">
+              <div class="child pb-2">
                 <v-btn
                   icon="fas fa-laptop"
                   color="#FBDF7E"
                   class="text-white"
                 ></v-btn>
-                <h3 class="ml-3 mt-4">Site internet</h3>
-                <p class="text-grey ml-3 mt-4 text-caption">
+                <h3 class="ml-3 mt-2">Site internet</h3>
+                <p class="text-grey ml-3 mt-2 text-caption">
                   Je suis capable de créer des <br />applications web
                   simple ou <br />complexe en plusieurs
                   <br />technologies.
@@ -89,31 +65,31 @@
                   color="#FBDF7E"
                   class="text-white"
                 ></v-btn>
-                <h3 class="ml-3 mt-4">Appli mobile</h3>
-                <p class="text-grey ml-3 mt-4 text-caption">
+                <h3 class="ml-3 mt-2">Appli mobile</h3>
+                <p class="text-grey ml-3 mt-2 text-caption">
                   Grâce â ma formation <br /> je peux egalement créer <br />
                   des applications mobiles fullstack.<br />
                 </p>
               </div>
-              <div class="child">
+              <div class="child pb-4">
                 <v-btn
                   icon="fas fa-camera"
                   color="#FBDF7E"
                   class="text-white"
                 ></v-btn>
-                <h3 class="ml-3 mt-4">Projet back-end</h3>
-                <p class="text-grey ml-3 mt-4 text-caption">
+                <h3 class="ml-3 mt-2">Projet back-end</h3>
+                <p class="text-grey ml-3 mt-2 text-caption">
                   Je peux également m'occuper<br />de projet uniquement
                   <br />back-end avec les technologies<br />les plus récentes.
                 </p>
               </div>
             </v-col>
           </v-row>
-          <v-divider></v-divider>
+          <v-divider id="portfolio"></v-divider>
         </div>
       </v-col>
 
-      <v-col cols="12" sm="12" id="services">
+      <v-col cols="12" sm="12">
         <div class="d-flex justify-center mb-6">
           <v-btn @click="setFilterCategory('all')" color="#FBDF7E" class="mr-2">Tout afficher</v-btn>
           <v-btn @click="setFilterCategory('frontend')" class="mr-2" variant="tonal">Front-end</v-btn>
@@ -141,14 +117,33 @@
             </v-col>
           </template>
         </v-row>
+        <v-container class="fill-height d-flex flex-column justify-center align-center text-center">
+          <p class="text-h6 mb-4 mt-4">Pour voir d'autres projets, n'hésitez pas à visiter mon GitHub.</p>
+
+          <v-btn
+              href="https://github.com/sbessaha"
+              target="_blank"
+              variant="plain"
+          >
+            <v-img src="github.png" height="72" width="72" contain />
+          </v-btn>
+
+          <div class="mt-10"></div>
+        </v-container>
       </v-col>
 
-      <v-col cols="12" class="mt-16" id="compétences">
-        <h2 class="text-center mb-8">Compétences Acquises <br> à la Web Académie</h2>
+      <v-divider></v-divider>
+
+      <div id="compétences"></div>
+
+      <v-col cols="12" class="mt-8">
+        <h2 class="text-center mb-8">
+          Compétences Acquises <br> à la Web Académie
+        </h2>
         <v-row>
           <template v-for="(skill, index) in skills" :key="index">
             <v-col cols="12" md="6" lg="4" class="text-center">
-              <v-card class="pa-3">
+              <v-card class="pa-3 skill-card">
                 <v-card-title class="justify-center">{{ skill.title }}</v-card-title>
                 <v-card-text>
                   <v-list dense>
@@ -165,6 +160,7 @@
         </v-row>
       </v-col>
 
+
       <v-col cols="12" sm="12" class="px-16" id="contact">
         <v-row>
           <v-col cols="12" sm="4">
@@ -177,16 +173,8 @@
                 variant="outlined"
               ></v-btn
               ><br />
-              <span class="text-caption">57 rue Bonte Pollet, 59000 Lille </span
+              <span class="text-caption">51 rue Roure, 59130 Lambersart</span
               ><br />
-              <v-btn
-                icon="fas fa-phone-alt"
-                color=""
-                class="mt-10"
-                variant="outlined"
-              ></v-btn
-              ><br />
-              <span class="text-caption">07 82 02 86 01</span> <br />
               <v-btn
                 icon="fas fa-envelope"
                 color=""
@@ -195,38 +183,53 @@
               ></v-btn
               ><br />
               <span class="text-caption">sofiane.bessaha@epitech.eu </span> <br />
+              <v-btn
+                  class="mt-10 mb-2"
+                  href="https://www.linkedin.com/in/sofiane-bessaha-415127271/"
+                  target="_blank"
+                  variant="plain"
+              >
+                <v-img src="linkedin.png" height="48" width="48" contain />
+              </v-btn>
+              <br />
+              <span class="text-caption">Sofiane Bessaha</span> <br />
             </div>
           </v-col>
           <v-col cols="12" sm="8">
-            <h1 class="mt-8">Envoyez moi un message !</h1>
+            <h1 class="mt-8">Contactez-moi !</h1>
             <v-divider></v-divider>
-            <span class="text-caption"
-              >N'hésitez pas a m'envoyer un message pour me contacter,
-            que ça soit via ce formulaire ou via les différentes informations,
-            personnels qui sont mis à votre disposition.</span
-            >
+
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
                 <v-text-field
-                  label="Nom"
-                  persistent-hint
-                  variant="outlined"
+                    v-model="form.name"
+                    label="Nom"
+                    persistent-hint
+                    variant="outlined"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" sm="6">
                 <v-text-field
-                  label="Téléphone"
-                  persistent-hint
-                  variant="outlined"
+                    v-model="form.email"
+                    label="Mail"
+                    type="email"
+                    persistent-hint
+                    variant="outlined"
                 ></v-text-field>
               </v-col>
             </v-row>
+
             <v-textarea
-              label="Message"
-              persistent-hint
-              variant="outlined"
+                v-model="form.message"
+                label="Message"
+                persistent-hint
+                variant="outlined"
             ></v-textarea>
-            <v-btn color="#FBDF7E" class="mt-2">Envoyez</v-btn>
+
+            <v-btn color="#FBDF7E" class="mt-2" @click="submitForm">Envoyer</v-btn>
+
+            <p v-if="successMessage" class="text-green">{{ successMessage }}</p>
+            <p v-if="errorMessage" class="text-red">{{ errorMessage }}</p>
           </v-col>
         </v-row>
       </v-col>
@@ -241,6 +244,44 @@ import { defineComponent, ref, computed } from "vue";
 import NavBar from "../components/NavBar.vue";
 import FooterView from "../components/FooterView.vue";
 
+const form = ref({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const successMessage = ref(null);
+const errorMessage = ref(null);
+
+const submitForm = async () => {
+  successMessage.value = null;
+  errorMessage.value = null;
+
+  try {
+    const response = await fetch("https://formspree.io/f/mblrryag", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.value.name || "",
+        email: form.value.email || "",
+        message: form.value.message || "",
+      }),
+    });
+
+    if (response.ok) {
+      successMessage.value = "Message envoyé avec succès !";
+      form.value = { name: "", email: "", message: "" };
+    } else {
+      throw new Error("Erreur lors de l'envoi du message.");
+    }
+  } catch (error) {
+    errorMessage.value = error.message;
+  }
+};
+
+
 export default defineComponent({
   name: "HomeView",
   setup() {
@@ -251,6 +292,7 @@ export default defineComponent({
         filterCategory.value = category;
       }
     }
+
     const items = [
       {
         img: "Twitter_1.png",
@@ -264,7 +306,7 @@ export default defineComponent({
         title: "FreeAds",
         description: "Plateforme de petites annonces en ligne",
         techno: "Laravel, HTML, TailwindCSS, PHPMyAdmin",
-        category: "fullstack",
+        category: "backend",
       },
       {
         img: "Goodrenov.png",
@@ -281,12 +323,19 @@ export default defineComponent({
         category: "frontend",
       },
       {
-        img: "cinema.png",
-        title: "My_Cinema",
-        description: "Application de gestion de cinéma",
-        techno: "PHP, MySQL, HTML, CSS, PHPMyAdmin",
-        category: "backend",
+        img: "CosMarket.png",
+        title: "Ecommerce",
+        description: "Site Ecommerce de vente en ligne de skin Counter Strike",
+        techno: "Laravel, ReactJS, PHPMyAdmin",
+        category: "fullstack",
       },
+      {
+        img: 'MYDEV.png',
+        title: "MyDev",
+        description: "Application pour collaborateur au sein de l'entreprise",
+        techno: "Vue3, Vue2, PostgreSQL, Java spring boot",
+        category: "fullstack"
+      }
     ];
 
     const filteredItems = computed(() => {
@@ -309,7 +358,7 @@ export default defineComponent({
       {
         title: "Développement Backend",
         details: [
-          "Node.js, Express.js, PHP, MySQL, Laravel, Symfony",
+          "Node.js, Express.js, PHP, PostgreSQL, Laravel, Java",
           "Bases de données: MongoDB, PHPMyAdmin",
           "Utilisation d'une API externe",
         ],
@@ -334,16 +383,16 @@ export default defineComponent({
         title: "Outils et Technologies",
         details: [
           "Git, GitHub, GitKraken",
-          "VScode, IntelliJ IDEA",
+          "VScode, Pack JetBrains (IntelliJ IDEA, WebStorm, Datagrip)",
           "Test: Postman",
         ],
       },
       {
         title: "Autres Compétences",
         details: [
-          "Design: Photoshop, Figma",
-          "PowerPoint, Word, Excel, Trello",
-          "Langues: Français, Anglais",
+          "Photoshop, Figma, Gimp",
+          "PowerPoint, Word, Excel, Trello, Jira",
+          "Français, Anglais",
         ],
       },
     ];
@@ -354,7 +403,9 @@ export default defineComponent({
       filteredItems,
       items,
       skills,
+      form,
       setFilterCategory,
+      submitForm,
     };
   },
   components: {
@@ -372,11 +423,7 @@ export default defineComponent({
 .head {
   position: relative;
   text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 400px;
-  width: 100%;
-  color: white;
+  height: 350px;
 }
 
 .head:before,
@@ -384,7 +431,7 @@ export default defineComponent({
   content: "";
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 70%;
   width: 50%;
   background: black;
   transform: skew(0deg, 6deg);
@@ -428,24 +475,15 @@ export default defineComponent({
   padding: 0 200px;
 }
 
-.hover-card {
-  position: relative;
-  overflow: hidden;
+.skill-card {
+  background-color: black !important;
+  border: 2px solid #FBDF7E !important;
+  color: white !important;
+  transition: transform 0.3s ease-in-out;
 }
 
-.overlay-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 16px;
+.skill-card:hover {
+  transform: scale(1.05);
 }
+
 </style>
