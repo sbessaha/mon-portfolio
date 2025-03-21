@@ -237,7 +237,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed, watch } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import NavBar from "../components/NavBar.vue";
 import FooterView from "../components/FooterView.vue";
 
@@ -247,7 +247,6 @@ export default defineComponent({
     const slider2 = ref(50);
     const filterCategory = ref("all");
     const setFilterCategory = (category) => {
-      console.log("test", category);
       if (category) {
         filterCategory.value = category;
       }
@@ -297,11 +296,6 @@ export default defineComponent({
       }
       return items.filter(item => item.category === filterCategory.value);
     });
-
-    watch(filterCategory, (newVal) => {
-      console.log("Nouvelle catégorie sélectionnée :", newVal);
-    });
-
 
     const skills = [
       {
