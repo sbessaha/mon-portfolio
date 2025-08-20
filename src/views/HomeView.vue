@@ -107,6 +107,7 @@
                   :elevation="isHovering ? 12 : 2"
                   :class="{ 'on-hover': isHovering }"
                   v-bind="props"
+                  @click="openDialog(item)"
                 >
                   <v-img :src="item.img" height="225px" cover> </v-img>
                   <v-card-title>{{ item.title }}</v-card-title>
@@ -129,6 +130,29 @@
           </v-btn>
 
           <div class="mt-10"></div>
+
+          <v-dialog v-model="dialog" max-width="800px">
+            <v-card v-if="selectedItem">
+              <v-img :src="selectedItem.img" height="300px" cover></v-img>
+              <v-card-title class="text-h5">{{ selectedItem.title }}</v-card-title>
+              <v-card-subtitle class="pb-2">{{ selectedItem.techno }}</v-card-subtitle>
+
+              <v-divider></v-divider>
+
+              <v-card-text style="white-space: pre-line;">
+                {{ selectedItem.longDescription }}
+              </v-card-text>
+
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue-darken-1" text @click="dialog = false">
+                  Fermer
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-container>
       </v-col>
 
@@ -285,6 +309,14 @@ const submitForm = async () => {
 export default defineComponent({
   name: "HomeView",
   setup() {
+    const dialog = ref(false);
+    const selectedItem = ref(null);
+
+    const openDialog = (item) => {
+      selectedItem.value = item;
+      dialog.value = true;
+    }
+
     const slider2 = ref(50);
     const filterCategory = ref("all");
     const setFilterCategory = (category) => {
@@ -300,6 +332,7 @@ export default defineComponent({
         description: "Projet de clone de Twitter",
         techno: "PHP, JS, MySQL, HTML, TailwindCSS, PHPMyAdmin",
         category: "fullstack",
+        longDescription: "Lorem Ipsum"
       },
       {
         img: "FreeAds.png",
@@ -307,6 +340,7 @@ export default defineComponent({
         description: "Plateforme de petites annonces en ligne",
         techno: "Laravel, HTML, TailwindCSS, PHPMyAdmin",
         category: "backend",
+        longDescription: "Lorem Ipsum"
       },
       {
         img: "Goodrenov.png",
@@ -314,6 +348,7 @@ export default defineComponent({
         description: "Site web pour une entreprise de rénovation",
         techno: "HTML, JS, TailwindCSS, Formspree",
         category: "frontend",
+        longDescription: "Lorem Ipsum"
       },
       {
         img: "Spotify.png",
@@ -321,6 +356,7 @@ export default defineComponent({
         description: "Application musicale inspirée de Spotify",
         techno: "React, API Externe",
         category: "frontend",
+        longDescription: "Lorem Ipsum"
       },
       {
         img: "CosMarket.png",
@@ -328,13 +364,15 @@ export default defineComponent({
         description: "Site Ecommerce de vente en ligne de skin Counter Strike",
         techno: "Laravel, ReactJS, PHPMyAdmin",
         category: "fullstack",
+        longDescription: "Lorem Ipsum"
       },
       {
         img: 'MYDEV.png',
         title: "MyDev",
         description: "Application pour collaborateur au sein de l'entreprise",
         techno: "Vue3, Vue2, PostgreSQL, Java spring boot",
-        category: "fullstack"
+        category: "fullstack",
+        longDescription: "Lorem Ipsum"
       }
     ];
 
@@ -404,8 +442,11 @@ export default defineComponent({
       items,
       skills,
       form,
+      selectedItem,
+      dialog,
       setFilterCategory,
       submitForm,
+      openDialog,
     };
   },
   components: {
