@@ -26,13 +26,8 @@
               <h5 class="mt-16 mb-6">À propos de moi</h5>
               <h4 class="mt-n2">Je suis un développeur web fullstack</h4>
               <p class="text-grey-darken-2 mt-2">
-                Fort de mon apprentissage a l'école Epitech, je suis capable de
-                créer des applications web simple ou complexe. Je suis
-                également capable de créer des applications mobiles et de
-                m'occuper de projet back-end.<br>
-                Grâce à mon alternance de 14mois au sein de Adeo Service en tant que Developpeur fullstack,
-                j'ai acquis une certaine expérience pour travailler au sein d'une entreprise et avec un groupe sur
-                un projet concret et utile.
+                Au cours de ma formation à Epitech, j’ai appris à concevoir et développer aussi bien des applications web que mobiles, allant de projets simples à des solutions plus ambitieuses.
+                Mon alternance de 14 mois chez Adeo Service, en tant que développeur fullstack, m’a offert une véritable expérience terrain, où j’ai pu collaborer avec une équipe et contribuer à des projets concrets et impactants.
               </p>
               <br />
               <v-btn tile dark color="yellow" class="mt-4" href="CV.jpeg" download>
@@ -42,55 +37,11 @@
           </v-row>
         </div>
       </v-col>
-      <v-col cols="12" class="padd">
-        <div class="first" id="project">
-          <v-row>
-            <v-col cols="12">
-              <div class="child pb-2">
-                <v-btn
-                  icon="fas fa-laptop"
-                  color="#FBDF7E"
-                  class="text-white"
-                ></v-btn>
-                <h3 class="ml-3 mt-2">Site internet</h3>
-                <p class="text-grey ml-3 mt-2 text-caption">
-                  Je suis capable de créer des <br />applications web
-                  simple ou <br />complexe en plusieurs
-                  <br />technologies.
-                </p>
-              </div>
-              <div class="child">
-                <v-btn
-                  icon="fas fa-mobile-alt"
-                  color="#FBDF7E"
-                  class="text-white"
-                ></v-btn>
-                <h3 class="ml-3 mt-2">Appli mobile</h3>
-                <p class="text-grey ml-3 mt-2 text-caption">
-                  Grâce â ma formation <br /> je peux egalement créer <br />
-                  des applications mobiles fullstack.<br />
-                </p>
-              </div>
-              <div class="child pb-4">
-                <v-btn
-                  icon="fas fa-camera"
-                  color="#FBDF7E"
-                  class="text-white"
-                ></v-btn>
-                <h3 class="ml-3 mt-2">Projet back-end</h3>
-                <p class="text-grey ml-3 mt-2 text-caption">
-                  Je peux également m'occuper<br />de projet uniquement
-                  <br />back-end avec les technologies<br />les plus récentes.
-                </p>
-              </div>
-            </v-col>
-          </v-row>
-          <v-divider id="portfolio"></v-divider>
-        </div>
-      </v-col>
+
+      <v-divider class="mt-10" id="portfolio"></v-divider>
 
       <v-col cols="12" sm="12">
-        <div class="d-flex justify-center mb-6">
+        <div class="d-flex justify-center mb-6 mt-10">
           <v-btn @click="setFilterCategory('all')" color="#FBDF7E" class="mr-2">Tout afficher</v-btn>
           <v-btn @click="setFilterCategory('frontend')" class="mr-2" variant="tonal">Front-end</v-btn>
           <v-btn @click="setFilterCategory('backend')" class="mr-2" variant="tonal">Back-end</v-btn>
