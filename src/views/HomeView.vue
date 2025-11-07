@@ -302,7 +302,7 @@ export default defineComponent({
         description: "Projet de clone de Twitter",
         techno: "PHP, JS, MySQL, HTML, TailwindCSS, PHPMyAdmin",
         category: "fullstack",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Ce projet était un défi technique : recréer les fonctionnalités principales de Twitter (tweets, (un)follow, création de compte) en n'utilisant que du PHP et du JavaScript basique, sans aucun framework. L'objectif était de bâtir une architecture back-end robuste et un front-end dynamique à partir de zéro, en gérant manuellement la base de données MySQL et les interactions utilisateur.",
         images: ["Twitter_1.png", "Twitter_1.png", "Twitter_1.png", "Twitter_1.png"]
       },
       {
@@ -311,7 +311,7 @@ export default defineComponent({
         description: "Plateforme de petites annonces en ligne",
         techno: "Laravel, HTML, TailwindCSS, PHPMyAdmin",
         category: "backend",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Inspiré de plateformes comme Cardmarket, ce projet a été développé avec Laravel pour gérer un système d'annonces en ligne. L'accent a été mis sur la logique back-end, permettant aux utilisateurs de créer, modifier et supprimer leurs propres annonces. Un système de rôles a aussi été implémenté pour donner aux administrateurs les droits de modération sur l'ensemble du contenu.",
         images: ["FreeAds.png", "FreeAds.png", "FreeAds.png", "FreeAds.png"]
       },
       {
@@ -320,7 +320,7 @@ export default defineComponent({
         description: "Site web pour une entreprise de rénovation",
         techno: "HTML, JS, TailwindCSS, Formspree",
         category: "frontend",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Premier projet professionnel réalisé pour un client. L'objectif était de livrer un site vitrine performant et sur-mesure en n'utilisant que HTML, TailwindCSS et JavaScript basique pour perfectionner ma maîtrise du front-end. Le site intègre un formulaire de contact fonctionnel via le service Formspree pour la gestion des demandes client.",
         images: ["Goodrenov.png", "Goodrenov.png", "Goodrenov.png", "Goodrenov.png"]
       },
       {
@@ -329,7 +329,7 @@ export default defineComponent({
         description: "Application musicale inspirée de Spotify",
         techno: "React, API Externe",
         category: "frontend",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Spotifine est une application musicale inspirée de Spotify, développée en React. Ce projet a été ma première expérience concrète avec la consommation d'API externes pour récupérer et afficher des données dynamiques (artistes, albums, chansons). C'était une étape clé pour apprendre à gérer l'état de l'application et les appels asynchrones dans un framework moderne.",
         images: ["Spotify.png", "Spotify.png", "Spotify.png", "Spotify.png"]
       },
       {
@@ -338,7 +338,7 @@ export default defineComponent({
         description: "Site Ecommerce de vente en ligne de skin Counter Strike",
         techno: "Laravel, ReactJS, PHPMyAdmin",
         category: "fullstack",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Réalisé en équipe de quatre, ce projet full-stack combinait Laravel pour l'API REST et React pour le front-end. Nous avons bâti une plateforme e-commerce complète, de la gestion des produits et des commandes à l'authentification. Le défi principal était de collaborer efficacement et de traduire des demandes métier et client en fonctionnalités techniques concrètes.",
         images: ["CosMarket.png", "CosMarket.png", "CosMarket.png", "CosMarket.png"]
       },
       {
@@ -347,7 +347,7 @@ export default defineComponent({
         description: "Application pour collaborateur au sein de l'entreprise",
         techno: "Vue3, Vue2, PostgreSQL, Java spring boot",
         category: "fullstack",
-        longDescription: "Lorem Ipsum",
+        longDescription: "Ce projet est l'application interne sur laquelle j'ai travaillé durant mon alternance. C'est un outil full-stack (Java Spring Boot, Vue.js, PostgreSQL) qui centralise la gestion des collaborateurs : fichiers, entretiens annuels, one-to-ones, etc. Cette expérience m'a offert une immersion totale dans un environnement de développement professionnel, m'apprenant les méthodologies agiles et la collaboration au sein d'une équipe de développeurs confirmés.",
         images: ['MYDEV.png', 'MYDEV.png', 'MYDEV.png', 'MYDEV.png']
       }
     ];
