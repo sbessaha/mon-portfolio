@@ -4,7 +4,7 @@
     <v-container fluid>
       <div class="head">
         <v-row>
-          <v-col cols="5">
+          <v-col cols="12" md="5">
             <div style="position: relative" class="mt-10">
               <h1 class="text-grey">Bienvenue !</h1>
               <h1 class="text-white">Je suis Sofiane Bessaha</h1>
@@ -55,10 +55,10 @@
             <v-col cols="12" md="4">
               <v-hover v-slot="{ isHovering, props }">
                 <v-card
-                  :elevation="isHovering ? 12 : 2"
-                  :class="{ 'on-hover': isHovering }"
-                  v-bind="props"
-                  @click="openDialog(item)"
+                    :elevation="isHovering ? 12 : 2"
+                    :class="{ 'on-hover': isHovering }"
+                    v-bind="props"
+                    @click="openDialog(item)"
                 >
                   <v-img :src="item.img" height="225px" cover> </v-img>
                   <v-card-title>{{ item.title }}</v-card-title>
@@ -84,7 +84,25 @@
 
           <v-dialog v-model="dialog" max-width="800px">
             <v-card v-if="selectedItem">
-              <v-img :src="selectedItem.img" height="300px" cover></v-img>
+
+              <v-carousel
+                  height="450px"
+                  show-arrows="hover"
+                  hide-delimiters
+                  style="background-color: #2c2c2c;"
+              >
+                <v-carousel-item
+                    v-for="(imageSrc, i) in selectedItem.images"
+                    :key="i"
+                >
+                  <v-img
+                      :src="imageSrc"
+                      height="100%"
+                      contain
+                  ></v-img>
+                </v-carousel-item>
+              </v-carousel>
+
               <v-card-title class="text-h5">{{ selectedItem.title }}</v-card-title>
               <v-card-subtitle class="pb-2">{{ selectedItem.techno }}</v-card-subtitle>
 
@@ -104,6 +122,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+
         </v-container>
       </v-col>
 
@@ -136,25 +155,25 @@
       </v-col>
 
 
-      <v-col cols="12" sm="12" class="px-16" id="contact">
+      <v-col cols="12" sm="12" class="px-4 px-md-16" id="contact">
         <v-row>
           <v-col cols="12" sm="4">
             <div class="child">
               <h1>Contact</h1>
               <v-btn
-                icon="fas fa-map-marker-alt"
-                color=""
-                class="mt-10"
-                variant="outlined"
+                  icon="fas fa-map-marker-alt"
+                  color=""
+                  class="mt-10"
+                  variant="outlined"
               ></v-btn
               ><br />
               <span class="text-caption">51 rue Roure, 59130 Lambersart</span
               ><br />
               <v-btn
-                icon="fas fa-envelope"
-                color=""
-                class="mt-10"
-                variant="outlined"
+                  icon="fas fa-envelope"
+                  color=""
+                  class="mt-10"
+                  variant="outlined"
               ></v-btn
               ><br />
               <span class="text-caption">sofiane.bessaha@epitech.eu </span> <br />
@@ -283,7 +302,8 @@ export default defineComponent({
         description: "Projet de clone de Twitter",
         techno: "PHP, JS, MySQL, HTML, TailwindCSS, PHPMyAdmin",
         category: "fullstack",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ["Twitter_1.png", "Twitter_1.png", "Twitter_1.png", "Twitter_1.png"]
       },
       {
         img: "FreeAds.png",
@@ -291,7 +311,8 @@ export default defineComponent({
         description: "Plateforme de petites annonces en ligne",
         techno: "Laravel, HTML, TailwindCSS, PHPMyAdmin",
         category: "backend",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ["FreeAds.png", "FreeAds.png", "FreeAds.png", "FreeAds.png"]
       },
       {
         img: "Goodrenov.png",
@@ -299,7 +320,8 @@ export default defineComponent({
         description: "Site web pour une entreprise de rénovation",
         techno: "HTML, JS, TailwindCSS, Formspree",
         category: "frontend",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ["Goodrenov.png", "Goodrenov.png", "Goodrenov.png", "Goodrenov.png"]
       },
       {
         img: "Spotify.png",
@@ -307,7 +329,8 @@ export default defineComponent({
         description: "Application musicale inspirée de Spotify",
         techno: "React, API Externe",
         category: "frontend",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ["Spotify.png", "Spotify.png", "Spotify.png", "Spotify.png"]
       },
       {
         img: "CosMarket.png",
@@ -315,7 +338,8 @@ export default defineComponent({
         description: "Site Ecommerce de vente en ligne de skin Counter Strike",
         techno: "Laravel, ReactJS, PHPMyAdmin",
         category: "fullstack",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ["CosMarket.png", "CosMarket.png", "CosMarket.png", "CosMarket.png"]
       },
       {
         img: 'MYDEV.png',
@@ -323,7 +347,8 @@ export default defineComponent({
         description: "Application pour collaborateur au sein de l'entreprise",
         techno: "Vue3, Vue2, PostgreSQL, Java spring boot",
         category: "fullstack",
-        longDescription: "Lorem Ipsum"
+        longDescription: "Lorem Ipsum",
+        images: ['MYDEV.png', 'MYDEV.png', 'MYDEV.png', 'MYDEV.png']
       }
     ];
 
@@ -398,6 +423,8 @@ export default defineComponent({
       setFilterCategory,
       submitForm,
       openDialog,
+      successMessage,
+      errorMessage,
     };
   },
   components: {
@@ -476,6 +503,52 @@ export default defineComponent({
 
 .skill-card:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 959px) {
+
+  .head {
+    background-color: black;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+
+  .head:before,
+  .head:after {
+    display: none;
+  }
+
+  .head .mt-10 {
+    margin-top: 0 !important;
+    position: static;
+  }
+
+  .head .v-row {
+    justify-content: center;
+  }
+
+  .egg {
+    margin: 24px auto 0;
+    width: 300px;
+    height: 255px;
+  }
+
+  #about .v-col-sm-6 {
+    text-align: center;
+  }
+  #about .mt-16 {
+    margin-top: 32px !important;
+  }
+
+  .imgHover {
+    padding: 0 16px;
+  }
+
+  .d-flex.justify-center {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
 
 </style>
