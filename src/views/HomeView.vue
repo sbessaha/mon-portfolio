@@ -30,7 +30,7 @@
                 Mon alternance de 14 mois chez Adeo Service, en tant que développeur fullstack, m’a offert une véritable expérience terrain, où j’ai pu collaborer avec une équipe et contribuer à des projets concrets et impactants.
               </p>
               <br />
-              <v-btn tile dark color="yellow" class="mt-4" href="CV.jpeg" download>
+              <v-btn tile dark color="yellow" class="mt-4" href="CV_FULLSTACK.pdf" download>
                 Télécharger mon CV
               </v-btn>
             </v-col>
@@ -157,7 +157,7 @@
 
       <v-col cols="12" sm="12" class="px-4 px-md-16" id="contact">
         <v-row>
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="4" class="text-center">
             <div class="child">
               <h1>Contact</h1>
               <v-btn
@@ -321,7 +321,7 @@ export default defineComponent({
         techno: "HTML, JS, TailwindCSS, Formspree",
         category: "frontend",
         longDescription: "Premier projet professionnel réalisé pour un client. L'objectif était de livrer un site vitrine performant et sur-mesure en n'utilisant que HTML, TailwindCSS et JavaScript basique pour perfectionner ma maîtrise du front-end. Le site intègre un formulaire de contact fonctionnel via le service Formspree pour la gestion des demandes client.",
-        images: ["Goodrenov.png", "Goodrenov.png", "Goodrenov.png", "Goodrenov.png"]
+        images: ["Goodrenov.png", "Goodrenov2.jpg", "Goodrenov3.jpg"]
       },
       {
         img: "Spotify.png",
@@ -330,7 +330,7 @@ export default defineComponent({
         techno: "React, API Externe",
         category: "frontend",
         longDescription: "Spotifine est une application musicale inspirée de Spotify, développée en React. Ce projet a été ma première expérience concrète avec la consommation d'API externes pour récupérer et afficher des données dynamiques (artistes, albums, chansons). C'était une étape clé pour apprendre à gérer l'état de l'application et les appels asynchrones dans un framework moderne.",
-        images: ["Spotify.png", "Spotify.png", "Spotify.png", "Spotify.png"]
+        images: ["Spotify.png"]
       },
       {
         img: "CosMarket.png",
@@ -348,7 +348,7 @@ export default defineComponent({
         techno: "Vue3, Vue2, PostgreSQL, Java spring boot",
         category: "fullstack",
         longDescription: "Ce projet est l'application interne sur laquelle j'ai travaillé durant mon alternance. C'est un outil full-stack (Java Spring Boot, Vue.js, PostgreSQL) qui centralise la gestion des collaborateurs : fichiers, entretiens annuels, one-to-ones, etc. Cette expérience m'a offert une immersion totale dans un environnement de développement professionnel, m'apprenant les méthodologies agiles et la collaboration au sein d'une équipe de développeurs confirmés.",
-        images: ['MYDEV.png', 'MYDEV.png', 'MYDEV.png', 'MYDEV.png']
+        images: ['MYDEV.png', 'MYDEV2.png', 'MYDEV3.png', 'MYDEV4.png']
       }
     ];
 
@@ -372,16 +372,16 @@ export default defineComponent({
       {
         title: "Développement Backend",
         details: [
-          "Node.js, Express.js, PHP, PostgreSQL, Laravel, Java",
-          "Bases de données: MongoDB, PHPMyAdmin",
-          "Utilisation d'une API externe",
+          "Node.js, Express.js, PHP, Java, Go",
+          "Framework : Laravel, Java spring boot",
+          "Bases de données: MongoDB, PHPMyAdmin, PostgreSQL",
         ],
       },
       {
         title: "Soft Skills",
         details: [
-          "Travail en équipe",
-          "Gestion du temps",
+          "Pair programming, travail d'équipe",
+          "Gestion du temps, gestion d'une équipe",
           "Rigueur, autonomie",
         ],
       },
@@ -396,8 +396,8 @@ export default defineComponent({
       {
         title: "Outils et Technologies",
         details: [
-          "Git, GitHub, GitKraken",
-          "VScode, Pack JetBrains (IntelliJ IDEA, WebStorm, Datagrip)",
+          "Git, GitHub, GitKraken, Kafka, Google Cloud Platform",
+          "VScode, Pack JetBrains (IntelliJ IDEA, WebStorm, Datagrip, CLion)",
           "Test: Postman",
         ],
       },
