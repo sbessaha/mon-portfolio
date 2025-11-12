@@ -364,7 +364,7 @@ export default defineComponent({
       {
         title: "Développement Frontend",
         details: [
-          "HTML, TailwindCSS, JavaScript",
+          "HTML, TailwindCSS, JavaScript, Typescript",
           "Frameworks: Vue.js, React",
           "Design Responsive",
         ],
